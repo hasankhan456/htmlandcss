@@ -1,25 +1,334 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+ <style>
+ .request-button{
+   background-color: black;
+   color: white;
+   height: 35px;
+   width: 105px;
+   cursor: pointer;
+   margin-right: 20px;
+ transition: opacity 0.15s,background-color 0.15s;
+ }
+.request-button:hover{
+   opacity: 0.7;
+}
+.request-button:active{
+   background-color:blue;
+}
+
+
+ .add-button{
+  
+    background-color: rgb(255, 216, 20);
+    color: black;
+    height: 36px;
+    width: 170px;
+    border-color: rgb(255, 216, 20);
+    border-radius: 18px;
+    border-style: solid;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: opacity 0.15s;
+ }
+ .add-button:hover{
+   opacity: 0.7;
+ }
+ .add-button:active{
+   opacity: 0.5;
+ }
+ .sign-button{
+
+background-color:rgb(46, 164, 79);
+height: 35px;
+width: 75px;
+border-color:rgb(46, 164, 79) ;
+border-radius: 5px;
+border-style: solid;
+margin-right: 20px;
+cursor: pointer;
+transition: opacity 0.15s,background-color 0.15s;
+
+ }
+.sign-button:hover{
+   opacity: 0.7;
+}
+.sign-button:active{
+   background-color: yellow;
+   ;
+}
+
+
+ .get-button{
+ background-color: rgb(121, 82, 179);
+ height: 35px;
+ width: 105px;
+border-color:rgb(121, 82, 179); ;
+ border-radius: 5px;
+ border-style: solid;
+ margin-bottom: 20px;
+ cursor: pointer;
+ 
+     
+ }
+ .download-button{
+background-color: white;
+color: black;
+height: 35px;
+width: 110px;
+border-color:black ;
+border-radius: 5px;
+border-style: solid;
+border-width: 1px;
+cursor: pointer;
+
+ }
+ .download-button:hover{
+   opacity: 0.7;
+
+ }
+ .download-button:active{
+   background-color: lightgreen;
+ }
+ .apply-button{
+    background-color: rgb(10,102,194);
+    height: 36px;
+    width: 210px;
+    border-color: rgb(10,102,194) ;
+    border-style: solid;
+    border-radius: 18px;
+    cursor: pointer;
+ }
+ .save-button{
+   
+    background-color: white;
+color: black;
+height: 36px;
+width: 100px;
+border-color:rgb(10,102,194); ;
+border-radius: 20px;
+border-style: solid;
+border-width: 1px;
+font-style: bold;
+cursor: pointer;
+
+ }
+
+.amazonlink{
+   color: rgb(0, 113,133);
+}
+
+.big{
+   font-size: 24px;
+   font-weight: bold;
+}
+.price{
+   color: rgb(0,110, 0);
+}
+.now-button{
+   background-color: rgb(255, 216, 20);
+    color: black;
+    height: 36px;
+    width: 150px;
+    border-color: rgb(255, 216, 20);
+    border-radius: 18px;
+    border-style: solid;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.car-button{
+   background-color: rgb(255, 164, 20);
+    color: black;
+    padding-right: 20px;
+   padding-left: 20px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+    border-color: rgb(255, 164, 20);
+    border-radius: 18px;
+    border-style: solid;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.subscribe{
+   background-color:rgb(199, 41, 41);
+   padding-right: 18px;
+   padding-left: 18px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   border-style: solid;
+   border-radius: 3px;
+   border-color:rgb(199, 41, 41);
+   cursor: pointer; 
+
+}
+.back{
+   margin-right: 8px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+.next-button {
+    margin-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    
+}
+.stretch-button{
+   background-color: green;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 25px;
+   padding-right: 25px;
+   border-color: green;
+   border-style: solid;
+   color: white;
+   cursor: pointer;
+   transition: padding 1s ;
+   margin-right: 20px;
+}
+.stretch-button:hover{
+  
+   padding-top: 20px;
+   padding-bottom: 20px;
+   padding-left: 35px;
+   padding-right: 35px;
+ 
+
+}
+.shadow-button{
+   background-color: green;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 25px;
+   padding-right: 25px;
+   border-color: green;
+   border-style: solid;
+   color: white;
+   cursor:pointer;
+   margin-right: 15px;
+   
+
+}
+
+.shadow-button:hover{
+   box-shadow:  5px 5px 0.8pc  black;
+   
+}
+.shadow-button:active{
+   padding-top: 7px;
+   padding-bottom: 7px;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+.one-button{
+   background-color: green;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 18px;
+   padding-right: 18px;
+   border-color: green;
+   border-style: solid;
+   color: white;
+   cursor:pointer;
+   margin-right: 15px;
+   transition: padding 0.15s;
+}
+.one-button:hover{
+   padding-top: 18px;
+   padding-bottom: 18px;
+   padding-left: 25px;
+   padding-right: 25px;
+}
+.two-button{
+   background-color: green;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 18px;
+   padding-right: 18px;
+   border-color: green;
+   border-style: solid;
+   color: white;
+   cursor:pointer;
+   margin-right: 15px;
+}
+.two-button:hover{
+   padding-top: 18px;
+   padding-bottom: 18px;
+   padding-left: 25px;
+   padding-right: 25p
+}
+.three-button{
+   background-color: green;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 18px;
+   padding-right: 18px;
+   border-color: green;
+   border-style: solid;
+   color: white;
+   cursor:pointer;
+   margin-right: 15px;
+}
+.three-button:hover{
+   padding-top: 18px;
+   padding-bottom: 18px;
+   padding-left: 25px;
+   padding-right: 25p
+
+}
+
+ </style>
 </head>
 <body>
-	<h1 align="center">login to your account</h1>
-	<p align="center"> your emial
-		 <input type="text" name="your email"></p>
-
-	</p>
- <p align="center"> password
-		 <input type="text" name="password"></p>
-
-		 <p align="center"> login
-  <button type="button" class="sign-button">sign up</button>
-    </p>
-
- 
- 
- 
+ <button>click</button>
+ <button>hasan</button>
+ <button>mango</button>
+ <p>helo world</p>
+ <p>my life is being fucked and far away from my family</p>
 
 
-</body>
+<a href="https://www.amazon.com/" target="_blank"> back to amazon</a>
+<p>nike black running shoes</p>
+<p>39$-in stock.</p>
+<p>free delivery tommorrow.</p>
+
+
+<button class="request-button">Request now</button>
+ <button class="add-button">Add to cart</button>
+ <button class="sign-button">sign up</button>
+ <button class="get-button">Get started</button>
+ <button class="download-button">Download</button>
+ <button class="apply-button">Apply on company website</button>
+ <button class="save-button">save</button>
+ <br><br><br><br>
+
+
+ <a class="amazonlink" href="https://www.amazon.com/" target="_blank"> back to amazon</a>
+<p class="big">nike black running shoes</p>
+<p class="price">39$-in stock.</p>
+<p class="free">free delivery tommorrow.</p>
+<button class="now-button">Add to cart</button>
+ <button class="car-button">Buy now</button>
+ <br><br><br><br>
+
+
+
+ <button class="subscribe">SUBSCRIBE</button><br><br><br>
+
+  <button class="back">back</button>
+  <a class="search-result" href="https://google.com">1</a>
+<a class="search-result" href="https://google.com">2</a>
+<a class="search-result" href="https://google.com">3</a>
+<a class="search-result" href="https://google.com">4</a>
+<a class="search-result" href="https://google.com">5</a>
+<button class="next-button">Next</button>
+<br><br><br>
+<button  class="stretch-button">stretch</button>
+<button class="shadow-button">Shadow</button>
+<br><br>
+<button class="one-button">One</button>
+<button class="two-button">Two</button>
+<button class="three-button">Three</button>
+</body> 
 </html>
